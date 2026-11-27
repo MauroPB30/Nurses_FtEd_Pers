@@ -1,0 +1,55 @@
+<section class="login">
+  <div class="login-card">
+    <svg class="login-icon" viewBox="0 0 64 64" role="img" [attr.aria-label]="'LOGIN.ICON_LABEL' | translate">
+      <circle cx="32" cy="32" r="30" />
+      <path d="M32 18v28M18 32h28" />
+    </svg>
+
+    <h1>{{ 'LOGIN.TITLE' | translate }}</h1>
+    <p class="login-subtitle">{{ 'LOGIN.SUBTITLE' | translate }}</p>
+
+    <form class="login-form" (submit)="submit($event)" novalidate>
+      <label for="login-user">{{ 'LOGIN.USER' | translate }}</label>
+      <input id="login-user" name="user" type="text" autocomplete="username" [value]="user()"
+        (input)="onUserInput($event)" [placeholder]="'LOGIN.USER_PLACEHOLDER' | translate" />
+
+      <label for="login-password">{{ 'LOGIN.PASSWORD' | translate }}</label>
+      <div class="password-field">
+        <input id="login-password" name="password" [type]="passwordType()" autocomplete="current-password"
+          [value]="password()" (input)="onPasswordInput($event)"
+          [placeholder]="'LOGIN.PASSWORD_PLACEHOLDER' | translate" />
+        <button type="button" class="password-toggle" (click)="togglePassword()" [attr.aria-pressed]="showPassword()">
+          {{ toggleLabel() | translate }}
+        </button>
+      </div>
+
+      <button type="submit" class="btn-primary">{{ 'LOGIN.SUBMIT' | translate }}</button>
+    </form>
+
+    @switch (status()) {
+    @case ('invalid-form') {
+    <div class="msg msg-error" role="alert">
+      <p>{{ 'LOGIN.ERRORS_TITLE' | translate }}</p>
+      <ul>
+        @for (error of errors(); track error.field) {
+        <li>{{ error.field | translate }}: {{ error.message | translate: error.params }}</li>
+        }
+      </ul>
+    </div>
+    }
+    @case ('invalid-credentials') {
+    <p class="msg msg-error" role="alert">{{ 'LOGIN.ERROR_INVALID_CREDENTIALS' | translate }}</p>
+    }
+    @case ('success') {
+    <p class="msg msg-success" role="status">{{ 'LOGIN.SUCCESS' | translate }}</p>
+    }
+    }
+
+    <p class="demo-hint">{{ 'LOGIN.DEMO_HINT' | translate: demoCredentials }}</p>
+
+    <p class="login-footer">
+      {{ 'LOGIN.NO_ACCOUNT' | translate }}
+      <a routerLink="/register">{{ 'LOGIN.GO_REGISTER' | translate }}</a>
+    </p>
+  </div>
+</section>

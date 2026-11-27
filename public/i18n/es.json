@@ -1,0 +1,59 @@
+{
+  "COMMON": {
+    "APP_NAME": "NombreApp",
+    "LOADING": "Cargando...",
+    "SAVE": "Guardar",
+    "CANCEL": "Cancelar",
+    "BACK": "Volver",
+    "ERROR_REQUIRED": "Este campo es obligatorio",
+    "ERROR_EMAIL": "Introduce un correo válido"
+  },
+  "HEADER": {
+    "LOGO_ARIA": "Ir al inicio",
+    "LANG_ES": "ES",
+    "LANG_EN": "EN"
+  },
+  "HOME": {
+    "TITLE": "Inicio",
+    "SUBTITLE": "Bienvenido a NombreApp",
+    "CTA_LOGIN": "Iniciar sesión",
+    "CTA_REGISTER": "Crear cuenta",
+    "CTA_SEARCH": "Buscar"
+  },
+  "LOGIN": {
+    "TITLE": "Iniciar sesión",
+    "SUBTITLE": "Accede a tu espacio de enfermería",
+    "ICON_LABEL": "Icono de enfermería",
+    "USER": "Usuario",
+    "USER_PLACEHOLDER": "Escribe tu usuario",
+    "PASSWORD": "Contraseña",
+    "PASSWORD_PLACEHOLDER": "Escribe tu contraseña",
+    "SHOW_PASSWORD": "Mostrar",
+    "HIDE_PASSWORD": "Ocultar",
+    "SUBMIT": "Entrar",
+    "ERRORS_TITLE": "Revisa los siguientes campos:",
+    "ERROR_USER_MIN": "El usuario debe tener al menos {{min}} caracteres",
+    "ERROR_PASSWORD_MIN": "La contraseña debe tener al menos {{min}} caracteres",
+    "ERROR_INVALID_CREDENTIALS": "Usuario o contraseña incorrectos",
+    "SUCCESS": "¡Bienvenido/a! Has iniciado sesión correctamente",
+    "DEMO_HINT": "Demo: usuario «{{user}}» y contraseña «{{password}}»",
+    "NO_ACCOUNT": "¿No tienes cuenta?",
+    "GO_REGISTER": "Crear cuenta"
+  },
+  "REGISTER": {
+    "TITLE": "Crear cuenta",
+    "NAME": "Nombre",
+    "EMAIL": "Correo electrónico",
+    "PASSWORD": "Contraseña",
+    "CONFIRM_PASSWORD": "Repetir contraseña",
+    "SUBMIT": "Crear cuenta",
+    "HAS_ACCOUNT": "¿Ya tienes cuenta?",
+    "GO_LOGIN": "Iniciar sesión"
+  },
+  "SEARCH": {
+    "TITLE": "Buscar",
+    "PLACEHOLDER": "Escribe para buscar...",
+    "SUBMIT": "Buscar",
+    "NO_RESULTS": "No se han encontrado resultados"
+  }
+}

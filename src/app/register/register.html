@@ -1,0 +1,30 @@
+<h1>{{ 'REGISTER.TITLE' | translate }}</h1>
+
+<form>
+  <label>
+    {{ 'REGISTER.NAME' | translate }}
+    <input type="text" name="name">
+  </label>
+
+  <label>
+    {{ 'REGISTER.EMAIL' | translate }}
+    <input type="email" name="email">
+  </label>
+
+  <label>
+    {{ 'REGISTER.PASSWORD' | translate }}
+    <input type="password" name="password">
+  </label>
+
+  <label>
+    {{ 'REGISTER.CONFIRM_PASSWORD' | translate }}
+    <input type="password" name="confirmPassword">
+  </label>
+
+  <button type="submit" class="btn-primary">{{ 'REGISTER.SUBMIT' | translate }}</button>
+</form>
+
+<p>
+  {{ 'REGISTER.HAS_ACCOUNT' | translate }}
+  <a routerLink="/login">{{ 'REGISTER.GO_LOGIN' | translate }}</a>
+</p>

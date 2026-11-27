@@ -1,0 +1,16 @@
+<header class="header">
+  <a routerLink="/" class="logo" [attr.aria-label]="'HEADER.LOGO_ARIA' | translate">
+    <svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+      <circle cx="24" cy="24" r="23" fill="#1D5462"></circle>
+      <path d="M9 25h8l3.5-8 6 15 3.5-7h4" fill="none" stroke="#5CC3CE"
+            stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path>
+      <circle cx="37.5" cy="25" r="2.8" fill="#F28C38"></circle>
+    </svg>
+    <span>{{ 'COMMON.APP_NAME' | translate }}</span>
+  </a>
+
+  <div class="lang">
+    <button type="button" (click)="cambiarIdioma('es')">{{ 'HEADER.LANG_ES' | translate }}</button>
+    <button type="button" (click)="cambiarIdioma('en')">{{ 'HEADER.LANG_EN' | translate }}</button>
+  </div>
+</header>
